@@ -9,9 +9,9 @@ new Vue({
     el: "#app",
     router,
     store,
-    computed: {
+    computed:{
         App,
     },
-    template: '<PostShow/>',
+    template:'<PostShow/>',
     render: h => h(App)
 }).$mount('#app')

@@ -36,17 +36,17 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  data() {
-    return {
+  data(){
+    return{
       years: [],
     };
   },
-  mounted() {
+  mounted(){
     this.years = this.genereate();
   },
 
-  methods: {
-    genereate() {
+  methods:{
+    genereate(){
       const years = [];
       for (let y = 2020; y > 1920; y--) {
         if (y > 2018) {
@@ -62,43 +62,43 @@ export default {
       return years;
     },
   },
-  computed: {
-    day: {
-      get() {
-        return this.$store.getters.set_day;
+  computed:{
+    day:{
+      get(){
+        return this.$store.getters.setDay;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setDay", val);
       },
     },
-    ...mapGetters(["set_day"]),
-    year: {
-      get() {
-        return this.$store.getters.set_year;
+    ...mapGetters(["setDay"]),
+    year:{
+      get(){
+        return this.$store.getters.setYear;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setYear", val);
       },
     },
-    ...mapGetters(["set_year"]),
-    month: {
-      get() {
-        return this.$store.getters.set_month;
+    ...mapGetters(["setYear"]),
+    month:{
+      get(){
+        return this.$store.getters.setMonth;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setMonth", val);
       },
     },
-    ...mapGetters(["set_month"]),
-    gender: {
-      get() {
-        return this.$store.getters.set_gender;
+    ...mapGetters(["setMonth"]),
+    gender:{
+      get(){
+        return this.$store.getters.setGender;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setGender", val);
       },
     },
-    ...mapGetters(["set_gender"]),
+    ...mapGetters(["setGender"]),
   },
 };
 </script>

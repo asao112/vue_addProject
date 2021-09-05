@@ -55,31 +55,31 @@ export default {
   computed: {
     radio: {
       get() {
-        return this.$store.getters.set_radio;
+        return this.$store.getters.setRadio;
       },
       set(val) {
         this.$store.commit("setRadio", val);
       },
     },
-    ...mapGetters(["set_radio"]),
+    ...mapGetters(["setRadio"]),
     radio2: {
       get() {
-        return this.$store.getters.set_radio2;
+        return this.$store.getters.setRadio2;
       },
       set(val) {
         this.$store.commit("setRadio2", val);
       },
     },
-    ...mapGetters(["set_radio2"]),
+    ...mapGetters(["setRadio2"]),
     radio3: {
       get() {
-        return this.$store.getters.set_radio3;
+        return this.$store.getters.setRadio3;
       },
       set(val) {
         this.$store.commit("setRadio3", val);
       },
     },
-    ...mapGetters(["set_radio3"]),
+    ...mapGetters(["setRadio3"]),
   },
 };
 </script>

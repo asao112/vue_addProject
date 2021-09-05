@@ -17,16 +17,16 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  computed: {
-    form: {
-      get() {
-        return this.$store.getters.set_form;
+  computed:{
+    form:{
+      get(){
+        return this.$store.getters.setForm;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setForm", val);
       },
     },
-    ...mapGetters(["set_form"]),
+    ...mapGetters(["setForm"]),
   },
 };
 </script>

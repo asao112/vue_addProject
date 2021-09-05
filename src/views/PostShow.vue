@@ -7,19 +7,19 @@
       </div>
       <div class="question-box">
         <p>-性別-</p>
-        {{ set_gender }}
+        {{ setGender }}
         <p>-生年月日-</p>
-        <span>{{ set_year }}年{{ set_month }}月{{ set_day }}日</span>
+        <span>{{ setYear }}年{{ setMonth }}月{{ setDay }}日</span>
         <p>-現在生命保険に加入されていますか-</p>
-        {{ set_radio }}
+        {{ setRadio }}
         <p>-現在入院中ですか、または、最近3ヶ月以内に医師の診察・検査の結果、入院・手術を勧められた事
           はありますか？-
         </p>
-        {{ set_radio2 }}
+        {{ setRadio2 }}
         <p>-過去５年以内に、病気や怪我で、手術を受けたことまたは継続して七日以上の入院をしたことがありますか？-</p>
-        {{ set_radio3 }}
+        {{ setRadio3 }}
         <p>-ご相談内容-</p>
-        {{ set_form }}
+        {{ setForm }}
       </div>
     </div>
     <router-link to="/post"><button class="back-btn button is-primary" id="next-btn">前へ戻る</button></router-link>
@@ -29,80 +29,78 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  neme: "gender",
-  computed: {
-    form: {
-      get() {
-        return this.$store.getters.set_form;
-      },
-      set(val) {
-        this.$store.commit("setForm", val);
-      },
+  neme:"gender",
+  computed:{
+    form:{
+      get(){
+        return this.$store.getters.setForm;},
+      set(val){
+        this.$store.commit("setForm", val);},
     },
-    ...mapGetters(["set_form"]),
-    day: {
-      get() {
-        return this.$store.getters.set_day;
+    ...mapGetters(["setForm"]),
+    day:{
+      get(){
+        return this.$store.getters.setDay;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setDay", val);
       },
     },
-    ...mapGetters(["set_day"]),
-    year: {
-      get() {
-        return this.$store.getters.set_year;
+    ...mapGetters(["setDay"]),
+    year:{
+      get(){
+        return this.$store.getters.setYear;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setYear", val);
       },
     },
-    ...mapGetters(["set_year"]),
-    month: {
-      get() {
-        return this.$store.getters.set_month;
+    ...mapGetters(["setYear"]),
+    month:{
+      get(){
+        return this.$store.getters.setMonth;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setMonth", val);
       },
     },
-    ...mapGetters(["set_month"]),
-    radio: {
-      get() {
-        return this.$store.getters.set_radio;
+    ...mapGetters(["setMonth"]),
+    radio:{
+      get(){
+        return this.$store.getters.setRadio;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setRadio", val);
       },
     },
-    ...mapGetters(["set_radio"]),
-    radio2: {
-      get() {
-        return this.$store.getters.set_radio2;
+    ...mapGetters(["setRadio"]),
+    radio2:{
+      get(){
+        return this.$store.getters.setRadio2;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setRadio2", val);
       },
     },
-    ...mapGetters(["set_radio2"]),
-    radio3: {
-      get() {
-        return this.$store.getters.set_radio3;
+    ...mapGetters(["setRadio2"]),
+    radio3:{
+      get(){
+        return this.$store.getters.setRadio3;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setRadio3", val);
       },
     },
-    ...mapGetters(["set_radio3"]),
-    gender: {
-      get() {
-        return this.$store.getters.set_gender;
+    ...mapGetters(["setRadio3"]),
+    gender:{
+      get(){
+        return this.$store.getters.setGender;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setGender", val);
       },
     },
-    ...mapGetters(["set_gender"]),
+    ...mapGetters(["setGender"]),
   },
 };
 </script>
