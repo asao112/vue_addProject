@@ -22,14 +22,14 @@
             </option>
           </select>
           <label>年</label>
-          <select v-model="month" @change="get_days">
+          <select v-model="month" >
             <option v-for="n in 12" :value="n" :key="n">{{ n }}</option></select>月
           <select name="day" v-model="day">
             <option v-for="n in 31" :value="n" :key="n">{{ n }}</option></select>日
         </div>
       </div>
     </div>
-          <router-link to="/about"><button class="button is-primary" id="next-btn">次へ進む</button></router-link>
+    <router-link to="/about"><button class="button is-primary" id="next-btn">次へ進む</button></router-link>
   </div>
 </template>
 

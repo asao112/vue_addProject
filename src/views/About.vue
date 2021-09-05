@@ -36,46 +36,46 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  data() {
-    return {
+  data(){
+    return{
       show: 1,
     };
   },
-  mounted() {
+  mounted(){
     this.nengoes = this.genereate();
   },
-  methods: {
-    next: function () {
+  methods:{
+    next: function(){
       this.show++;
-      if (this.show > 3) {
+      if(this.show > 3){
         this.show = 3;
       }
     },
   },
-  computed: {
-    radio: {
-      get() {
+  computed:{
+    radio:{
+      get(){
         return this.$store.getters.setRadio;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setRadio", val);
       },
     },
     ...mapGetters(["setRadio"]),
-    radio2: {
-      get() {
+    radio2:{
+      get(){
         return this.$store.getters.setRadio2;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setRadio2", val);
       },
     },
     ...mapGetters(["setRadio2"]),
-    radio3: {
-      get() {
+    radio3:{
+      get(){
         return this.$store.getters.setRadio3;
       },
-      set(val) {
+      set(val){
         this.$store.commit("setRadio3", val);
       },
     },
